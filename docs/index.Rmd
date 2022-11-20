@@ -1,45 +1,29 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "Inequality of Jail Prisoners"
+author: "Ivy Li"
+date: '2022-11-19'
 output: html_document
 ---
+
+## Abstract 
+The US has 5% population of the world but a 25% prisoner population of the world. Prisoners are not treated equally in US prisons. We used a dataset from Vera Inst that contains a lot of detailed data related to US prison. The direct stakeholders can be officials in US Justice Department, family members of prisoners, lawyers, and state/local governments. The indirect stakeholders can be any US citizen or law enforcement people in other countires.  The questions that we answer in this report:
+  * Growth of prisoner population in the country and by states.
+  * Prisoner population by gender, race, and geographic area.
+  * Is there a bias (unfairness) to minorities, specially Black/Africa American people.
+
+
+### Introduction
+The US has 5% population of the world but a 25% prisoner population of the world. Prisoners are not treated equally in US prisons. We used a dataset from Vera Inst that contains a lot of detailed data related to US prison. The direct stakeholders can be officials in US Justice Department, family members of prisoners, lawyers, and state/local governments. The indirect stakeholders can be any US citizen or law enforcement people in other countires.  The questions that we answer in this report:
+  - Growth of prisoner population in the country and by states.
+  - Prisoner population by gender, race, and geographic area.
+  - Is there a bias (unfairness) to minorities, specially Black/Africa American people.
+
+
+### Data Summary
+We will focus on the Total Population, Total Jail Population, and Black Jail Population. These values will likely be calculated using your DPLYR skills. You might answer such questions as: 
 
 ```{r echo=FALSE, eval=TRUE, message=FALSE}
 source("../source/a4-helpers.R")
 source("../source/analysis.R")
 ```
-
-## Abstract 
-[TODO: Include a short abstract (about 50 words)]
-
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
-
-## Introduction 
-[TODO]
-
-## Data Summary 
-[TODO]
-
-[TODO ... other sections ... See Canvas for details]
-
-_All the very best with your work!_
 
