@@ -1,6 +1,7 @@
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
+library(plotly)
 
 # The functions might be useful for A4
 source("../source/a4-helpers.R")
@@ -101,7 +102,8 @@ plot_jail_pop_for_us <- function(dataset)  {
 }
 
 dataset <- get_year_jail_pop()
-plot_jail_pop_for_us(dataset)
+p <- plot_jail_pop_for_us(dataset)
+plot(p)
 
 ## Section 4  ----  
 #----------------------------------------------------------------------------#
@@ -110,7 +112,7 @@ plot_jail_pop_for_us(dataset)
 # See Canvas
 #----------------------------------------------------------------------------#
 # get state names
-print(unique(df_recent$state))
+# print(unique(df_recent$state))
 
 # the State is WA, it can be replaced by any state
 get_year_jail_pop <- function() {
@@ -129,7 +131,8 @@ plot_jail_pop_for_us <- function(dataset)  {
 }
 
 dataset <- get_year_jail_pop()
-plot_jail_pop_for_us(dataset)
+p <- plot_jail_pop_for_us(dataset)
+plot(p)
 
 ## Section 5  ---- 
 #----------------------------------------------------------------------------#
@@ -153,15 +156,17 @@ print(paste("The US black prison ratio % is: ", black_ratio))
 library("usmap")
 
 # black jail pop by county
-plot_usmap(data = df_recent, values = "black_jail_pop", color = "black") + 
+p <- plot_usmap(data = df_recent, values = "black_jail_pop", color = "black") + 
   scale_fill_continuous(low = "white", high = "red", name = "County Black Jail Population (2018)", label = scales::comma) + 
   theme(legend.position = "right")
+plot(p)
 
 # black jail pop by state
 state_black_jail_pop <- df_recent %>% group_by(state) %>% 
   summarise(black_pop = sum(black_jail_pop, na.rm =  TRUE))
-plot_usmap(data = state_black_jail_pop, values = "black_pop", color = "black") + 
+p <- plot_usmap(data = state_black_jail_pop, values = "black_pop", color = "black") + 
   scale_fill_continuous(low = "white", high = "red",name = "State Black Jail Population (2018)", label = scales::comma) + 
   theme(legend.position = "right")
+plot(p)
 
 ## Load data frame ---- 

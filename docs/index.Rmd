@@ -1,29 +1,44 @@
 ---
 title: "Inequality of Jail Prisoners"
 author: "Ivy Li"
-date: '2022-11-19'
-output: html_document
+date: "2022-11-19"
+output:
+  html_document: default
+  pdf_document: default
+editor_options:
+  markdown:
+    wrap: sentence
 ---
 
-## Abstract 
-The US has 5% population of the world but a 25% prisoner population of the world. Prisoners are not treated equally in US prisons. We used a dataset from Vera Inst that contains a lot of detailed data related to US prison. The direct stakeholders can be officials in US Justice Department, family members of prisoners, lawyers, and state/local governments. The indirect stakeholders can be any US citizen or law enforcement people in other countires.  The questions that we answer in this report:
-  * Growth of prisoner population in the country and by states.
-  * Prisoner population by gender, race, and geographic area.
-  * Is there a bias (unfairness) to minorities, specially Black/Africa American people.
+## Abstract
 
+The US has 5% population of the world but a 25% prisoner population of the world.
+Prisoners are not treated equally in US prisons.
+We used a dataset from Vera Inst that contains a lot of detailed data related to US prison.
+The direct stakeholders can be officials in US Justice Department, family members of prisoners, lawyers, and state/local governments.
+The indirect stakeholders can be any US citizen or law enforcement people in other countires.
+The questions that we answer in this report: \* Growth of prisoner population in the country and by states.
+\* Prisoner population by gender, race, and geographic area.
+\* Is there a bias (unfairness) to minorities, specially Black/Africa American people.
 
 ### Introduction
-The US has 5% population of the world but a 25% prisoner population of the world. Prisoners are not treated equally in US prisons. We used a dataset from Vera Inst that contains a lot of detailed data related to US prison. The direct stakeholders can be officials in US Justice Department, family members of prisoners, lawyers, and state/local governments. The indirect stakeholders can be any US citizen or law enforcement people in other countires.  The questions that we answer in this report:
-  - Growth of prisoner population in the country and by states.
-  - Prisoner population by gender, race, and geographic area.
-  - Is there a bias (unfairness) to minorities, specially Black/Africa American people.
 
+The US has 5% population of the world but a 25% prisoner population of the world.
+Prisoners are not treated equally in US prisons.
+We used a dataset from Vera Inst that contains a lot of detailed data related to US prison.
+The direct stakeholders can be officials in US Justice Department, family members of prisoners, lawyers, and state/local governments.
+The indirect stakeholders can be any US citizen or law enforcement people in other countires.
+The questions that we answer in this report: - Growth of prisoner population in the country and by states.
+- Prisoner population by gender, race, and geographic area.
+- Is there a bias (unfairness) to minorities, specially Black/Africa American people.
 
 ### Data Summary
-We will focus on the Total Population, Total Jail Population, and Black Jail Population. These values will likely be calculated using your DPLYR skills. You might answer such questions as: 
+
+We will focus on the Total Population, Total Jail Population, and Black Jail Population.
+These values will likely be calculated using your DPLYR skills.
+You might answer such questions as:
 
 ```{r echo=FALSE, eval=TRUE, message=FALSE}
 source("../source/a4-helpers.R")
 source("../source/analysis.R")
 ```
-
